@@ -127,7 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Minsweeper.cpp" />
+    <ClCompile Include="Source\Board.cpp" />
+    <ClCompile Include="Source\Cell.cpp" />
+    <ClCompile Include="Source\Minsweeper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Header\Board.h" />
+    <ClInclude Include="Header\Cell.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

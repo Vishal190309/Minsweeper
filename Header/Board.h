@@ -22,7 +22,23 @@ namespace Board {
 
 		int countMinesAround(int xPos, int yPos);
 		bool isValidCellPosition(int x, int y);
+		void populateBoard(int x, int y);
+		void populateMines(int x, int y);
+		void populateCells();
+		void openAllCells();
+		void opneEmptyCell(int x, int y);
+		void processCellVaue(int x, int y);
+		void processEmptyCell(int x, int y);
+		void processMineCell(int x, int y);
+		bool areAllCellOpen();
+		void gameWon();
+		void gameLost();
+		void initialize();
 
+		void startText();
+		void chekIfStartGame();
+		void startGame();
+		
 	public:
 		Board();
 		~Board();
@@ -35,13 +51,8 @@ namespace Board {
 		std::random_device random_device;
 
 
-		void initialize();
+		void openCell(int x, int y, bool print = false);
 		void printBoard();
-		void openCell(int x, int y);
-		void populateBoard(int x, int y);
-		void populateMines(int x, int y);
-		void populateCells();
-		void openAllCells();
 
 		BoardState getBoardState();
 	};

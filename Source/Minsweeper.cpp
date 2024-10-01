@@ -11,13 +11,18 @@ int main()
 {   
     
     Board::Board* board = new Board::Board();
+
     while (board->getBoardState() != Board::BoardState::COMPLETED) {
+        cout << "Enter x and y co-ordinates:\n";
         int x;
         int y;
-        cin >> x;
-        cin >> y;
+        cin >> y>>x;
 
-        board->openCell(x, y);
+        board->openCell(x, y,true);
+        if (board->getBoardState() != Board::BoardState::COMPLETED) {
+            board->printBoard();
+        }
     }
+    
 }
 
